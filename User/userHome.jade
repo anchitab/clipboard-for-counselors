@@ -1,0 +1,67 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Final Project
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js')
+    script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='userHome.css')
+    link(href='https://fonts.googleapis.com/css?family=Noto+Sans', rel='stylesheet')
+  body
+    // Navigation
+    #myTopnav.topnav
+      a.active(href='#profile') Profile
+      a(href='#roster') Roster
+      a(href='#annoucements') Edit Annoucements
+      a(href='#participantsignout') Participant Sign Out
+      a#signout(href='#signout') Sign Out
+      a.icon(href='javascript:void(0);', onclick='myFunction()')
+        span(style='font-size:30px;cursor:pointer', onclick='openNav()') ☰
+    script(src='userNav.js')
+    // Change Password
+    .sidenav
+      #settingsContent Username: ------
+      #settingsContent Password: *******
+      p#newpassword
+        input(type='password', placeholder='New Password')
+      p#cnewpassword
+        input(type='password', placeholder='Confirm Password')
+      p
+        button#settings(onclick='settings()') Change Password
+    script.
+      var x = 1;
+      function settings() {
+      var y = document.getElementById("settings");
+      if (x == 1) {
+      document.getElementById("newpassword").style.display="block";
+      document.getElementById("cnewpassword").style.display="block";
+      x = 2;
+      y.innerHTML = "Save";
+      } else {
+      document.getElementById("newpassword").style.display= "none";
+      document.getElementById("cnewpassword").style.display= "none";
+      x = 1;
+      y.innerHTML = "Change Password";
+      }
+      }
+    // Profile Info
+    .container
+      .row.center
+        .col-md-12
+          img.img.img-responsive(src='pictures/profile')
+      .row.center
+        .col-md-12
+          h3 Counselor Name
+      .row.center
+        .col-md-12
+          h4 Position: ---
+      .row.center
+        .col-md-12
+          h4 Cluster: ---
+      .row.center
+        .col-md-12
+          h4 House: ---
