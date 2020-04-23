@@ -1,0 +1,78 @@
+html
+  head
+    link(href='https://fonts.googleapis.com/css?family=Noto+Sans', rel='stylesheet')
+    link(href='/stylesheets/register.css', rel='stylesheet')
+    link(href='/stylesheets/nav.css', rel='stylesheet')
+  body(style='background-color:#282924')
+    include nav.jade
+    br
+    br
+    br
+    .container
+      .form-style-10
+        h1 Make a Clipboard Account
+        form#form_new_counselor(name="newcounselor",method="post", action="/newcounselor")
+          .section
+            span 1
+            | Name
+          .inner-wrap
+            label
+              | First Name 
+              input(type='text', name='firstname')
+            label
+              | Last Name 
+              input(type='text', name='lastname')
+          .section
+            span 2
+            | Position
+          .inner-wrap
+            label
+              | Cluster Cluster: 
+              select(name='cluster')
+                option(value='Cowell') Cowell Cluster
+                option(value='Lake') Lake Cluster
+                option(value='Lomita') Lomita Cluster
+                option(value='Mayfield') Mayfield Cluster
+            label
+              | House 
+              select(name='house')
+                option(value='ZAP') ZAP
+                option(value='Lake') Terra
+                option(value='Lomita') Tri Delt
+                option(value='Mayfield') Theta
+                option(value='Pi Phi') Pi Phi
+                option(value='EBF') EBF
+                option(value='KA') KA
+                option(value='Jerry') Jerry
+                option(value='Narnia') Narnia
+                option(value='680') 680
+                option(value='Kappa Sig') Kappa Sig
+                option(value='Theta Delt') Theta Delt
+                option(value='717 Dolores') 717 Dolores
+                option(value='Grove') Grove
+                option(value='Kairos') Kairos
+                option(value='Phi Sig') Phi Sig
+            label
+              | Position
+              select(name='positions')
+                option(value='Head Counselor') Head Counselor
+                option(value='Residential Counselor') Residential Counselor
+                option(value='AC') Activity Coordinators
+                option(value='RD') Residential Director
+          .section
+            span 3
+            | Account Information
+          .inner-wrap
+            label
+              | Username 
+              input(type='text', name='username')
+            label
+              | Password 
+              input(type='password', name='password')
+            label
+              | Confirm Password 
+              input(type='password', name='reenter')
+          .button-section
+            input(type='submit', name='Sign Up')
+            br
+            br
