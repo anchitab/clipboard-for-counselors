@@ -1,0 +1,29 @@
+body{
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #FEFCFB;
+}
+
+h3{
+  font-size: 2em;
+}
+
+.table{
+  border: 0.5px solid black;
+  width: 100%;
+  text-align: left;
+  color: #282924;
+  font-size: 1.5em;
+}
+
+.th{
+  border: 0.5px solid black;
+  padding: 10px;
+}
+
+.ays{
+  display: none;
+}
+
+.hidden{
+  display: none;
+}

@@ -1,0 +1,36 @@
+block content
+  h3= title
+  form#form(name="addann", method="post", action="/addann")
+    span Title:
+    span &nbsp;
+    input#title(type="text", name="title")
+    br
+    br
+    span Annoucement:
+    span &nbsp;
+    textarea#content(rows="5" cols = "50" name="content")
+    br
+    br
+    span Author:
+    span &nbsp;
+    input#author(type="text", name="author")
+    br
+    br
+    span Date:
+    span &nbsp;
+    input#date(type="text", name="date", readonly)
+    br
+    br
+    button#submit(type="submit") submit
+
+
+
+  script(type='text/javascript').
+    var date = new Date();
+    var mm = date.getMonth() + 1;
+    var dd = date.getDate();
+    var yyyy = date.getFullYear();
+    var currentdate = mm + "/" + dd + "/" + yyyy;
+    document.getElementById('date').value = currentdate;
+    
+    //ADD COOKIE NAME

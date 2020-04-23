@@ -1,0 +1,71 @@
+extends layout
+block content
+
+    head
+        link(rel='stylesheet', href='stylesheets/annlist.css')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        
+    body
+    
+      h3 Edit Announcements
+              
+      table.table#table
+        thead
+          tr
+            th.th Title
+            th.th Announcement
+            th.th Author
+            th.th Date
+            th.th Delete
+
+        tbody
+          each user, i in annlist.reverse()
+            tr
+              td.th #{user.title}
+              td.th #{user.content}
+              td.th #{user.author}
+              td.th #{user.date}
+              td.th 
+                form
+                  input#delete(type='button', value='Delete', onclick="findindex(this)")
+        
+        form(name="deleteann", method="post", action = "/deleteann" )
+          p.ays#ays Are you sure?
+          input.ays#deleteBtn(type='submit', value='Delete')
+          input.ays#cancelBtn(type='button', value='Cancel', onclick="cancel()")
+          p.hidden
+            input#title(type='text' name = "title")
+          p.hidden
+            input#content(type='text' name = "content")
+          p.hidden
+            input#author(type='text' name = "author")
+          p.hidden
+            input#date(type='text' name = "date")            
+    
+    script.
+     function findindex(x) {
+       var index = x.parentNode.parentNode.parentNode.rowIndex;
+       var title = document.getElementById("table").rows[index].cells[0].innerHTML;
+       var content = document.getElementById("table").rows[index].cells[1].innerHTML;
+       var author = document.getElementById("table").rows[index].cells[2].innerHTML;
+       var date = document.getElementById("table").rows[index].cells[3].innerHTML;
+       
+      
+       document.getElementById("title").value = title;
+       document.getElementById("content").value = content;
+       document.getElementById("author").value = author;
+       document.getElementById("date").value = date;
+       
+
+       
+       document.getElementById("ays").style.display = "block";
+       document.getElementById("deleteBtn").style.display = "block";
+       document.getElementById("cancelBtn").style.display = "block";
+     }
+     
+     function cancel(){
+       document.getElementById("ays").style.display= "none";
+       document.getElementById("deleteBtn").style.display= "none";
+       document.getElementById("cancelBtn").style.display= "none";
+     }
+     
