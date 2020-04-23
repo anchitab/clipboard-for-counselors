@@ -1,0 +1,230 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Final Project
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js')
+    script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+    link(href='https://fonts.googleapis.com/css?family=Noto+Sans', rel='stylesheet')
+    link(rel='stylesheet', href='nav.css')
+    link(rel='stylesheet', href='home.css')
+    link(href='https://fonts.googleapis.com/css?family=Noto+Sans', rel='stylesheet')
+  body
+    // Navigation
+    #mySidenav.sidenav
+      a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
+      a(href='#') Home
+      a(href='#') Activities
+      a(href='#') Contact
+      a(href='#') About
+      p.divider
+      a(href='#', id='#loginNav') Login
+    span(style='font-size:30px;cursor:pointer', onclick='openNav()') ☰
+    script.
+      function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      }
+      function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      }
+    // End Navigation
+    // Home Page
+    .container
+      .row
+        .col-md-12
+          img#logo(src='pictures/logo.png')
+      .row.welcome
+        .col-md-12
+          h1 Welcome to SPCS
+      // Annoucements
+      .row
+        .col-md-8
+          .row.header
+            .col-md-12
+              p Annoucements
+          .row
+            .col-md-12.scroll
+              button.accordion
+                .row
+                  .col-md-12
+                    h3.title Title
+                .row.authorDate
+                  .col-md-9
+                    p Author
+                  .col-md-3.date
+                    p Date
+              .panel
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              button.accordion
+                .row
+                  .col-md-12
+                    h3.title Title
+                .row.authorDate
+                  .col-md-9
+                    p Author
+                  .col-md-3.date
+                    p Date
+              .panel
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              button.accordion
+                .row
+                  .col-md-12
+                    h3.title Title
+                .row.authorDate
+                  .col-md-9
+                    p Author
+                  .col-md-3.date
+                    p Date
+              .panel
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              button.accordion
+                .row
+                  .col-md-12
+                    h3.title Title
+                .row.authorDate
+                  .col-md-9
+                    p Author
+                  .col-md-3.date
+                    p Date
+              .panel
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              button.accordion
+                .row
+                  .col-md-12
+                    h3.title Title
+                .row.authorDate
+                  .col-md-9
+                    p Author
+                  .col-md-3.date
+                    p Date
+              .panel
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        // Contact Numbers
+        .col-md-4
+          .row.header
+            .col-md-12
+              h1 Head Counselor Emergency Numbers
+          .row
+            .col-md-12.scroll.contactNums
+              table.table
+                thead
+                  tr
+                    th Name
+                    th Assignment
+                    th Phone
+                tbody
+                  tr
+                    td Alex Ramirez
+                    td Cowell: Pi Phi
+                    td (650) 505-3172
+                  tr
+                    td Natalie Aziz
+                    td Cowell: Tri Delt
+                    td (650) 505-3126
+                  tr
+                    td Rohan Carter-Rau
+                    td Cowell: Terra
+                    td (650) 505-3124
+                  tr
+                    td Jon Sington
+                    td Cowell: Theta
+                    td (650) 505-3122
+                  tr
+                    td Andres Camperi
+                    td Cowell: ZAP
+                    td (650) 505-3132
+                  tr
+                    td Erin Hawley
+                    td Lake: Jerry
+                    td (650) 505-3131
+                  tr
+                    td Trevor Rex
+                    td Lake: EBF
+                    td (650) 505-3130
+                  tr
+                    td Coby Palivathukal
+                    td Lake: Narnia
+                    td (650) 387-4293
+                  tr
+                    td Jamie Xie
+                    td Lake: KA
+                    td (650) 285-9511
+                  tr
+                    td Lauren Moseley
+                    td Mayfield: Phi Sig
+                    td (650) 387-4216
+                  tr
+                    td Karen Zellars
+                    td Mayfield: Grove
+                    td (650) 387-4293
+                  tr
+                    td Shalisa James
+                    td Mayfield: 717 Dolores
+                    td (650) 391-6468
+                  tr
+                    td Olivia Hindera
+                    td Mayfield: Karios
+                    td (650) 272-1502
+                  tr
+                    td Peter Lessler
+                    td Lomita: 680
+                    td (650) 250-3217
+                  tr
+                    td Spencer Garrett
+                    td Lomita: Kappa Sig
+                    td (650) 250-6256
+                  tr
+                    td Chia-Ying Lee
+                    td Lomita: Theta Delta
+                    td (650) 250-2031
+        script.
+          var acc = document.getElementsByClassName("accordion");
+          var i;
+          for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+          } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+          });
+          }
+      .row
+        .col-md-12
+          // carousel
+          h2.header Gallery
+          #myCarousel.carousel.slide(data-ride='carousel')
+            // Indicators
+            ol.carousel-indicators
+              li.active(data-target='#myCarousel', data-slide-to='0')
+              li(data-target='#myCarousel', data-slide-to='1')
+              li(data-target='#myCarousel', data-slide-to='2')
+              li(data-target='#myCarousel', data-slide-to='3')
+            // Wrapper for slides
+            .carousel-inner
+              .item.active
+                img(src='pictures/car1.jpg', style='width:100%;')
+              .item
+                img(src='pictures/car2.jpg', style='width:100%;')
+              .item
+                img(src='pictures/car3.jpg', style='width:100%;')
+              .item
+                img(src='pictures/car4.jpg', alt='New york', style='width:100%;')
+            |  -->
+            // Left and right controls
+            a.left.carousel-control(href='#myCarousel', data-slide='prev')
+              span.glyphicon.glyphicon-chevron-left
+              span.sr-only Previous
+            a.right.carousel-control(href='#myCarousel', data-slide='next')
+              span.glyphicon.glyphicon-chevron-right
+              span.sr-only Next

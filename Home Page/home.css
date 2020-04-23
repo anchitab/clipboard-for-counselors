@@ -1,0 +1,84 @@
+body{
+  background: #282924;
+}
+
+.welcome{
+  text-align: center;
+  font-family: 'Noto Sans', sans-serif;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stanford_Oval_May_2011_panorama.jpg/800px-Stanford_Oval_May_2011_panorama.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 300px;
+}
+
+#logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    height: 20%;
+    margin-bottom: 0;
+}
+
+
+/* Annoucements */
+.scroll{
+  height: 500px;
+  overflow: auto;
+  margin-bottom: 10px;
+}
+
+.header{
+  font-family: 'Noto Sans', sans-serif;
+  color: #FEFCFB;
+  text-align: center;
+  font-size: 60px;
+}
+
+
+
+.title{
+  font-size: 30px;
+}
+
+.authorDate{
+  font-style: italic;
+  font-size: 15px;
+}
+
+.date{
+  text-align: right;
+}
+
+
+.accordion {
+    background-color: #FEFCFB;
+    color: #800000;
+    padding: 0 10px 0;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+.active, .accordion:hover {
+    background-color: #f2f0ef;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: #FEFCFB;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-radius: 0px;
+    color: #282924;
+}
+
+.contactNums{
+  color: #FEFCFB;
+}
